@@ -151,7 +151,7 @@ catch
   exit
 }
 
-Write-Host "Downloading latest patch (chrome_elf.zip)...`n"
+Write-Host "Downloading latest patch...`n"
 $elfPath = Join-Path -Path $PWD -ChildPath 'chrome_elf.zip'
 try
 {
@@ -293,7 +293,7 @@ if ($RemoveAdPlaceholder)
     Copy-Item -LiteralPath $xpuiUnpackedPath -Destination "$xpuiUnpackedPath.bak"
     $xpuiContents = Get-Content -LiteralPath $xpuiUnpackedPath -Raw
 
-    Write-Host 'Spicetify detected - You may need to reinstall BTS after running "spicetify apply".';
+    Write-Host 'Spicetify detected - You may need to reinstall BlockTheSpot after running "spicetify apply".';
   }
   else
   {
